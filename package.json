@@ -1,0 +1,15 @@
+{
+  "name": "tamara-fontanella",
+  "version": "1.0.0",
+  "description": "Cypress sample project",
+  "scripts": {
+    "test": "cypress run",
+    "cypress": "cypress open"
+  },
+  "author": "Walmyr Filho <wlsf82@gmail.com> (http://walmyr-filho.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^3.3.0"
+  },
+  "repository": {}
+}
