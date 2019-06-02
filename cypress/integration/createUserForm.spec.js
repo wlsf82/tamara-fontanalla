@@ -11,19 +11,42 @@ describe("Create user", () => {
   });
 
   it("by only filling full name and email - using support command", () => {
-    cy.createUser("Tamara", "Fontanella", "foo@bar.baz");
+    const userWithOnlyMandatoryFields = {
+      firstName: "Tamara",
+      lastName: "Fontanella",
+      email: "foo@bar.baz"
+    };
+
+    cy.createUser(userWithOnlyMandatoryFields);
 
     cy.get("#notice").should("contain", "Usuário Criado com sucesso");
   });
 
-  it.only("user creation error - wrong email", () => {
-    cy.createUser("Tamara", "Fontanella", "foo@bar");
+  it("user creation error - wrong email", () => {
+    const userWithInvalidEmail = {
+      firstName: "Tamara",
+      lastName: "Fontanella",
+      email: "foo@bar"
+    };
+
+    cy.createUser(userWithInvalidEmail);
 
     cy.get("#error_explanation").should("contain", "Email translation missing: pt-BR.activerecord.errors.models.user.attributes.email.invalid");
   });
 
   it("register all fields", () => {
-    cy.createUser("Tamara", "Fontanella", "foo@bar.baz", "Brasil", "FURB", "analista de teste", "feminino", "26");
+    const userWithAllData = {
+      firstName: "Tamara",
+      lastName: "Fontanella",
+      email: "foo@bar.baz",
+      address: "Some address here",
+      university: "FURB",
+      profile: "some profile here",
+      gender: "feminino",
+      age: "26"
+    };
+
+    cy.createUser(userWithAllData);
 
     cy.get("#notice").should("contain", "Usuário Criado com sucesso");
   });

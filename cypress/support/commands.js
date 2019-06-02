@@ -23,14 +23,24 @@
 //
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
-Cypress.Commands.add("createUser", (firstName, lastName, email, address = "", university = "", profile = "", gender = "", age = "") => {
-  cy.get("#user_name").type(firstName);
-  cy.get("#user_lastname").type(lastName);
-  cy.get("#user_email").type(email);
-  cy.get("#user_address").type(address); 
-  cy.get("#user_university").type(university);
-  cy.get("#user_profile").type(profile);
-  cy.get("#user_gender").type(gender);
-  cy.get("#user_age").type(age);
+Cypress.Commands.add("createUser", user => {
+  cy.get("#user_name").type(user.firstName);
+  cy.get("#user_lastname").type(user.lastName);
+  cy.get("#user_email").type(user.email);
+  if (user.address) {
+    cy.get("#user_address").type(user.address);
+  }
+  if (user.university) {
+    cy.get("#user_university").type(user.university);
+  }
+  if (user.profile) {
+    cy.get("#user_profile").type(user.profile);
+  }
+  if (user.gender) {
+    cy.get("#user_gender").type(user.gender);
+  }
+  if (user.age) {
+    cy.get("#user_age").type(user.age);
+  }
   cy.get("input[type='submit']").click();
 });
