@@ -1,10 +1,10 @@
 describe("User List", () => {
-    beforeEach(() => cy.visit("/users/"));
+    beforeEach(() => cy.visit("/users"));
     
-    it.only("change a user's email", () => {
-        cy.get("tr.material-icons").click();
+    it("change first user's email", () => {
+        cy.get(".material-icons").first().click();
 
-
+        // @TODO: implement the rest.
     });
 
 });
