@@ -1,12 +1,11 @@
 describe("User List", () => {
     beforeEach(() => cy.visit("/users"));
     
-//    it("change first user's email", () => {
-//        cy.get(".material-icons").first().click();
+    it("View user's profile", () => {
+        cy.get(".material-icons").first().click();
+        // Neste teste o que pode ser utilizado para comparar os dados que são apresentados?
 
-        // @TODO: implement the rest.
-//    });
-
+    });
     it("change first user's email", () => {
      // Como selecionar o segundo item de edição, com o ícone lápis? o first é a lupa.
      //   cy.get("[href='/users/8552/edit']").click();
