@@ -7,8 +7,7 @@ describe("User List", () => {
 
     });
     it("change first user's email", () => {
-     // Como selecionar o segundo item de edição, com o ícone lápis? o first é a lupa.
-     //   cy.get("[href='/users/8552/edit']").click();
+        cy.get('.material-icons').contains('edit').first().click();
         cy.get("#user_email").clear();
         const ChangeWithEmail = {
             email: "foo@bar.baz"
