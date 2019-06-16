@@ -8,7 +8,12 @@ describe("Find Dropdown and Select", () => {
     })
     
     it("Find Selects ", () => {
-    //  cy.get(".select-dropdown").click();
-        cy.get(".select-dropdown").select('Naruto').click(); 
+        cy.get(".select-dropdown").first().click();
+        cy.contains('Naruto').click();
+    })
+
+    it("Selects second item", () => {
+        cy.get(".select-dropdown").eq(2).click();
+        cy.contains('Ronaldo').click();
     })
 })
