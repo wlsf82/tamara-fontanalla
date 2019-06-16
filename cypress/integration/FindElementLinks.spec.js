@@ -3,6 +3,7 @@ describe("Find Elements Links", () => {
 
     it("Links - OK 200 SUCCESS", () => {
         cy.get("[href='/buscaelementos/success']").click();
+        cy.get("h5").should("contain", "Success!")
     });
 
     it("Links Erro 400 - Bad Request", () => {
@@ -16,6 +17,4 @@ describe("Find Elements Links", () => {
     it("Links Erro 500 - Internal Server Error", () => {
         cy.get("[href='/buscaelementos/internalservererror']").click();
     });
-
-
 });
