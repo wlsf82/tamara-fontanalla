@@ -5,7 +5,7 @@ describe("Find elements Radio-button and Check-box", () => {
         cy.get("[for='red']").click()
     });
 
-    it.only("Find check-box", () => {
+    it("Find check-box", () => {
         cy.get("[for='black']").click()
     });
 });
