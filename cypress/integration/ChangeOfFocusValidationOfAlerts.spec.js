@@ -5,10 +5,12 @@ describe("JavaScript Alerts", () => {
         cy.contains('Clique para JS Alert').click();
         //Como ativar a apresentação do alerta no cypress?
     });
+
     it("Js Confirm", () => {
         cy.contains('Clique para JS Confirm').click();
 
     });
+
     it("Js Prompt", () => {
         //Como preencher o prompt?
         cy.contains('Clique para JS Prompt').click();
