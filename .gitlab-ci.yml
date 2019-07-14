@@ -8,13 +8,11 @@ stages:
 unit testing:
   stage: unit
   script:
-    - npm install
     - npm run test:unit
 
 smoke testing:
   stage: smoke
   script:
-    - npm install
     - npm run test:smoke
 
 end-to-end testing:
@@ -24,4 +22,4 @@ end-to-end testing:
     - npm run test:e2e
   artifacts:
     paths:
-      - /cypress/videos/*.mp4
+      - cypress/videos/*.mp4
