@@ -1,19 +1,7 @@
 image: 'cypress/base'
   
 stages:
-  - unit
-  - smoke
   - e2e
-
-unit testing:
-  stage: unit
-  script:
-    - npm run test:unit
-
-smoke testing:
-  stage: smoke
-  script:
-    - npm run test:smoke
 
 end-to-end testing:
   stage: e2e
