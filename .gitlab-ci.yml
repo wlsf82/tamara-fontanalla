@@ -1,0 +1,11 @@
+image: 'cypress/base'
+  
+stages:
+  - test
+
+npm_install_and_test:
+  stage: test
+  script:
+    - npm install
+    - npm test
+
