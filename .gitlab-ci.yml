@@ -5,20 +5,23 @@ stages:
   - smoke
   - e2e
 
-job 1:
+unit testing:
   stage: unit
   script:
     - npm install
     - npm run test:unit
 
-job 2:
+smoke testing:
   stage: smoke
   script:
     - npm install
     - npm run test:smoke
 
-job 3:
+end-to-end testing:
   stage: e2e
   script:
     - npm install
     - npm run test:e2e
+  artifacts:
+    paths:
+      - /cypress/videos/*.mp4
