@@ -1,7 +1,7 @@
 describe("User List", () => {
     beforeEach(() => cy.visit("/users"));
     
-    it.only("View user's profile", () => {
+    it("View user's profile", () => {
         /**
          * Neste teste o que pode ser utilizado para comparar os dados que são apresentados?
          * Veja a solução abaixo:
