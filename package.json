@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Cypress sample project",
   "scripts": {
-    "test": "cypress run",
+    "test": "npm run test:unit && npm run test:smoke  && npm run test:e2e",
+    "test:unit": "echo unit testing...",
+    "test:smoke": "echo smoke testing...",
+    "test:e2e": "cypress run",
     "cypress": "cypress open"
   },
   "author": "Walmyr Filho <wlsf82@gmail.com> (http://walmyr-filho.com)",
