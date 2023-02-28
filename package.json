@@ -9,7 +9,7 @@
   "author": "Walmyr Filho <wlsf82@gmail.com> (http://walmyr-filho.com)",
   "license": "MIT",
   "devDependencies": {
-    "cypress": "^3.3.0"
+    "cypress": "^12.7.0"
   },
   "repository": {}
 }
